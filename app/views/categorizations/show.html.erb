@@ -1,0 +1,34 @@
+<h1>Categorize</h1>
+
+<div class="kitten">
+  <%= image_tag @kitten.image %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categorization.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_for @categorization do |f| %>
+
+<p>
+ <%= f.label :category_id %>
+ <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank:"Please choose a category..."}) %>
+</p>
+
+<p>
+ <%= f.submit 'Add Category' %>
+</p>
+
+<% end %>
