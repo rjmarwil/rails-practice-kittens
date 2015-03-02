@@ -4,4 +4,8 @@ class CategoriesKittensController < ApplicationController
     @categories_kittens = CategoriesKittens.all
   end
 
+  def show
+    @kitten = Kitten.find(params[:id])
+  end
+
 end
