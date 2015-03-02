@@ -4,22 +4,6 @@
   <%= image_tag @kitten.image %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categorization.each do |category| %>
-    <tr>
-      <td><%= category.name %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <%= form_for @categorization do |f| %>
 
 <p>
