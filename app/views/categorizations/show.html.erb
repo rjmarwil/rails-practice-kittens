@@ -8,7 +8,7 @@
 
 <p>
  <%= f.label :category_id %>
- <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank:"Please choose a category..."}) %>
+ <%= f.collection_select(:category_id, Category.all.order('name ASC'), :id, :name, {include_blank:"Please choose a category..."}) %>
 </p>
 
 <p>
