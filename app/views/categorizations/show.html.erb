@@ -4,7 +4,7 @@
   <%= image_tag @kitten.image %>
 </div>
 
-<%= form_for @categorization do |f| %>
+<%= form_for [@kitten, @categorization] do |f| %>
 
 <p>
  <%= f.label :category_id %>
